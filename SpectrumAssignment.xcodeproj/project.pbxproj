@@ -55,13 +55,77 @@
 			isa = PBXGroup;
 			children = (
 				53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */,
-				53A60AC023BA425A0020DCB4 /* ViewController.swift */,
-				53A60AC223BA425A0020DCB4 /* Main.storyboard */,
+				53A60AD723BA465B0020DCB4 /* ViewModels */,
+				53A60AD623BA46570020DCB4 /* ViewControllers */,
+				53A60AD523BA46550020DCB4 /* Views */,
+				53A60AD423BA46520020DCB4 /* Constants */,
+				53A60AD323BA464F0020DCB4 /* Models */,
+				53A60AD223BA464A0020DCB4 /* Utilities */,
+				53A60AD123BA46460020DCB4 /* CustomLibraries */,
+				53A60AD023BA46350020DCB4 /* StoryBoards */,
 				53A60AC523BA425D0020DCB4 /* Assets.xcassets */,
-				53A60AC723BA425D0020DCB4 /* LaunchScreen.storyboard */,
 				53A60ACA23BA425D0020DCB4 /* Info.plist */,
 			);
 			path = SpectrumAssignment;
+			sourceTree = "<group>";
+		};
+		53A60AD023BA46350020DCB4 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				53A60AC223BA425A0020DCB4 /* Main.storyboard */,
+				53A60AC723BA425D0020DCB4 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		53A60AD123BA46460020DCB4 /* CustomLibraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomLibraries;
+			sourceTree = "<group>";
+		};
+		53A60AD223BA464A0020DCB4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		53A60AD323BA464F0020DCB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53A60AD423BA46520020DCB4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		53A60AD523BA46550020DCB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		53A60AD623BA46570020DCB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				53A60AC023BA425A0020DCB4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		53A60AD723BA465B0020DCB4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +352,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.SpectrumAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satya.SpectrumAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.SpectrumAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satya.SpectrumAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
