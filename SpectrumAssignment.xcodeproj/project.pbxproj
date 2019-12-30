@@ -12,6 +12,10 @@
 		53A60AC423BA425A0020DCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC223BA425A0020DCB4 /* Main.storyboard */; };
 		53A60AC623BA425D0020DCB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC523BA425D0020DCB4 /* Assets.xcassets */; };
 		53A60AC923BA425D0020DCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC723BA425D0020DCB4 /* LaunchScreen.storyboard */; };
+		53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */; };
+		53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ADC23BA4AE10020DCB4 /* Company.swift */; };
+		53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ADE23BA4B520020DCB4 /* Member.swift */; };
+		53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		53A60AC523BA425D0020DCB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A60AC823BA425D0020DCB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A60ACA23BA425D0020DCB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		53A60ADC23BA4AE10020DCB4 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		53A60ADE23BA4B520020DCB4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		53A60AD123BA46460020DCB4 /* CustomLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				53A60AD923BA4A710020DCB4 /* Service Manager  */,
 			);
 			path = CustomLibraries;
 			sourceTree = "<group>";
@@ -95,6 +104,8 @@
 		53A60AD323BA464F0020DCB4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				53A60ADC23BA4AE10020DCB4 /* Company.swift */,
+				53A60ADE23BA4B520020DCB4 /* Member.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 		53A60AD423BA46520020DCB4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -126,6 +138,14 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		53A60AD923BA4A710020DCB4 /* Service Manager  */ = {
+			isa = PBXGroup;
+			children = (
+				53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */,
+			);
+			path = "Service Manager ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */,
 				53A60AC123BA425A0020DCB4 /* ViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
+				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
+				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,
+				53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
