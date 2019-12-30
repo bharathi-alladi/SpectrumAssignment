@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */; };
-		53A60AC123BA425A0020DCB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AC023BA425A0020DCB4 /* ViewController.swift */; };
+		53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */; };
 		53A60AC423BA425A0020DCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC223BA425A0020DCB4 /* Main.storyboard */; };
 		53A60AC623BA425D0020DCB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC523BA425D0020DCB4 /* Assets.xcassets */; };
 		53A60AC923BA425D0020DCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC723BA425D0020DCB4 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,14 @@
 		53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ADC23BA4AE10020DCB4 /* Company.swift */; };
 		53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ADE23BA4B520020DCB4 /* Member.swift */; };
 		53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */; };
+		53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE223BA4DDA0020DCB4 /* Router.swift */; };
+		53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53A60ABB23BA425A0020DCB4 /* SpectrumAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectrumAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53A60AC023BA425A0020DCB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
 		53A60AC323BA425A0020DCB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53A60AC523BA425D0020DCB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A60AC823BA425D0020DCB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		53A60ADC23BA4AE10020DCB4 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		53A60ADE23BA4B520020DCB4 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		53A60AE223BA4DDA0020DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */,
+				53A60AE223BA4DDA0020DCB4 /* Router.swift */,
 				53A60AD723BA465B0020DCB4 /* ViewModels */,
 				53A60AD623BA46570020DCB4 /* ViewControllers */,
 				53A60AD523BA46550020DCB4 /* Views */,
@@ -128,7 +133,7 @@
 		53A60AD623BA46570020DCB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				53A60AC023BA425A0020DCB4 /* ViewController.swift */,
+				53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 		53A60AD723BA465B0020DCB4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,10 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */,
-				53A60AC123BA425A0020DCB4 /* ViewController.swift in Sources */,
+				53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
+				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
 				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
 				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,
+				53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */,
 				53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
