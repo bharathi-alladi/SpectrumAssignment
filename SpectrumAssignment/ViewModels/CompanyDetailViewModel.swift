@@ -17,5 +17,23 @@ class CompanyDetailViewModel {
     init(_ company:Company) {
         self.company = company
     }
+    
+    func getDetails() -> Company {
+        
+        return company
+    }
+    
+    func getRowCount() -> Int {
+        
+        return company.members.count
+    }
+    
+    func getMemberTitle(_ index : Int) -> String {
+        
+        let member = company.members[index]
+        let name = member.name
+        let fullName = (name?.first ?? "") + " " + (name?.last ?? "")
+        return fullName
+    }
 
 }

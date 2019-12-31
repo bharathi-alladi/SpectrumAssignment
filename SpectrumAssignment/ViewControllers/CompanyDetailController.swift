@@ -12,6 +12,11 @@ class CompanyDetailController: UIViewController {
     
     var viewModel : CompanyDetailViewModel!
     
+    @IBOutlet var companyimage : UIImageView!
+    @IBOutlet var aboutLabel : UILabel!
+    @IBOutlet var websiteLabel : UILabel!
+    
+    
     class func initWithViewModel(_ viewModel: CompanyDetailViewModel) -> CompanyDetailController {
         
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -23,6 +28,22 @@ class CompanyDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadUI()
+        self.companyimage.layer.borderWidth = 1
+        self.companyimage.layer.masksToBounds = false
+        self.companyimage.layer.borderColor = UIColor.black.cgColor
+        self.companyimage.layer.cornerRadius = companyimage.frame.height/2
+        self.companyimage.clipsToBounds = true
+    }
+    
+    // load UI
+    func loadUI() {
+        
+        let details = viewModel.getDetails()
+//        companyimage.image =
+        aboutLabel.text = details.about
+        websiteLabel.text = details.website
+        
     }
 
 }

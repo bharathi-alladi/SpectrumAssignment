@@ -28,6 +28,7 @@ class Router {
     func navigateToCompanyDetails (_ company : Company) {
         
         let viewModel = CompanyDetailViewModel.init(company)
+        
         let detailedView = CompanyDetailController.initWithViewModel(viewModel)
         detailedView.tabBarItem = UITabBarItem.init(title: "Company Details", image: nil, tag: 0)
         

@@ -10,6 +10,8 @@ import UIKit
 
 class MemberListController: UIViewController {
     
+    @IBOutlet var member_tableView : UITableView!
+    
     var viewModel : CompanyDetailViewModel!
     
     class func initWithViewModel(_ viewModel: CompanyDetailViewModel) -> MemberListController {
@@ -23,5 +25,29 @@ class MemberListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.member_tableView.delegate = self
+        self.member_tableView.dataSource = self
     }
+}
+
+extension MemberListController : UITableViewDelegate {
+    
+}
+
+
+
+extension MemberListController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getRowCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell")
+        cell?.textLabel!.text = viewModel.getMemberTitle(indexPath.row)
+        return cell!
+    }
+    
+    
 }
