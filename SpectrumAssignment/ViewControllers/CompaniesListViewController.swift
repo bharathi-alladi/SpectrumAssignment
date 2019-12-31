@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompaniesListViewController: UIViewController ,UITableViewDataSource ,  UITableViewDelegate {
+class CompaniesListViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var company_tableView : UITableView!
@@ -56,7 +56,10 @@ class CompaniesListViewController: UIViewController ,UITableViewDataSource ,  UI
             self.present(alertController, animated: true, completion: nil)
         })
     }
-    
+
+}
+
+extension CompaniesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return viewModel!.getRowCount()
@@ -70,13 +73,21 @@ class CompaniesListViewController: UIViewController ,UITableViewDataSource ,  UI
         cell.companiesIcons.layer.borderWidth = 1
         cell.companiesIcons.layer.masksToBounds = false
         cell.companiesIcons.layer.borderColor = UIColor.black.cgColor
-        cell.companiesIcons.layer.cornerRadius = cell.companiesIcons.frame.height/2
+        cell.companiesIcons.layer.cornerRadius = cell.frame.height/2
         cell.companiesIcons.clipsToBounds = true
         
         cell.companynameLable.text = company.company
         return cell
     }
+}
 
-
+extension CompaniesListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.rowSelected(indexPath.row)
+    }
+    
 }
 

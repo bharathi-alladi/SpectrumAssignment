@@ -19,6 +19,9 @@
 		53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE223BA4DDA0020DCB4 /* Router.swift */; };
 		53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */; };
 		53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */; };
+		53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */; };
+		53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */; };
+		53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		53A60AE223BA4DDA0020DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewModel.swift; sourceTree = "<group>"; };
 		53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailController.swift; sourceTree = "<group>"; };
+		53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListController.swift; sourceTree = "<group>"; };
+		53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */,
+				53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */,
+				53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */,
+				53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -232,9 +241,12 @@
 				53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
 				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
+				53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
 				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
 				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,
+				53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */,
+				53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */,
 				53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */,
 				53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */,
 			);

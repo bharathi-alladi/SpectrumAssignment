@@ -41,5 +41,13 @@ class CompaniesListViewModel  {
         return companyListData[index]
     }
     
+    func rowSelected(_ index : Int) {
+        
+        // get the index's element from company list data
+        let companyDetails = companyListData[index]
+        // with this data, call router's navigate to detailView
+        Router.sharedInstance.navigateToCompanyDetails(companyDetails)
+    }
+    
 }
 
