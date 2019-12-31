@@ -11,6 +11,7 @@ import UIKit
 class CompanyDetailViewModel {
     
     var company:Company!
+    
     var companyDetailController : CompanyDetailController?
     var memberListController : MemberListController?
     
@@ -34,6 +35,12 @@ class CompanyDetailViewModel {
         let name = member.name
         let fullName = (name?.first ?? "") + " " + (name?.last ?? "")
         return fullName
+    }
+    
+    func rowSelected(_ index : Int) {
+        
+        let memberDetails = company.members[index]
+        Router.sharedInstance.navigateToMemberDetails(_member: memberDetails)
     }
 
 }

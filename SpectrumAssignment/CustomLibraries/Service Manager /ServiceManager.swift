@@ -40,4 +40,7 @@ struct ServiceManager {
             })
             dataTask.resume()
         }
-}
+    }
+
+
+

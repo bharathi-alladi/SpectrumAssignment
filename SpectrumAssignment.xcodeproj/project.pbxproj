@@ -22,6 +22,8 @@
 		53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */; };
 		53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */; };
 		53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */; };
+		53A60AF423BBADD20020DCB4 /* MemberDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */; };
+		53A60AF623BBAFE00020DCB4 /* MemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailController.swift; sourceTree = "<group>"; };
 		53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListController.swift; sourceTree = "<group>"; };
 		53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
+		53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsController.swift; sourceTree = "<group>"; };
+		53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */,
 				53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */,
 				53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */,
+				53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			children = (
 				53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */,
 				53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */,
+				53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -240,9 +246,11 @@
 				53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */,
 				53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
+				53A60AF623BBAFE00020DCB4 /* MemberDetailViewModel.swift in Sources */,
 				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
 				53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
+				53A60AF423BBADD20020DCB4 /* MemberDetailsController.swift in Sources */,
 				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
 				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,
 				53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */,

@@ -40,6 +40,13 @@ class Router {
         tabbarViewController.setViewControllers([detailedView, memberListView], animated: true)
         rootNavigationController?.pushViewController(tabbarViewController, animated: true)
     }
+    
+    func navigateToMemberDetails (_member : Member) {
+        
+        let viewModel = MemberDetailViewModel.init(_member)
+        let memberView = MemberDetailsController.initWithViewModel(viewModel)
+        rootNavigationController?.pushViewController(memberView, animated: true)
+    }
 
 
 }
