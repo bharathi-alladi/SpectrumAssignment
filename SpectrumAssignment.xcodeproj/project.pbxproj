@@ -18,6 +18,7 @@
 		53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */; };
 		53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE223BA4DDA0020DCB4 /* Router.swift */; };
 		53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */; };
+		53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		53A60AE223BA4DDA0020DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		53A60AE423BA4ED00020DCB4 /* CompaniesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewModel.swift; sourceTree = "<group>"; };
+		53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		53A60AD523BA46550020DCB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */,
 				53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
+				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
 				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
 				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,

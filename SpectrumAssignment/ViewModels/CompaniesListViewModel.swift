@@ -24,10 +24,10 @@ class CompaniesListViewModel  {
             
             if companyListData != nil {
                 self.companyListData = companyListData!
-                // inform viewcontroller -> success case
+                self.viewController?.reloadTableView()
             }
             else {
-                // inform viewcontroller -> failure case
+                self.viewController?.displayAlert(with: error)
             }
         })
     }
@@ -36,5 +36,10 @@ class CompaniesListViewModel  {
         return companyListData.count
     }
     
+    func getContact(index:Int) -> Company {
+        
+        return companyListData[index]
+    }
     
 }
+
