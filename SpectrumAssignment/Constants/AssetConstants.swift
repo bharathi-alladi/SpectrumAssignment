@@ -16,4 +16,6 @@ struct ASSET_CONSTANTS {
     
     static let FAV_BTN = "favourite_button"
     static let FAV_BTN_SELECTED = "favourite_button_selected"
+    
+    static let PLACEHOLDER_PIC = "placeholder_photo"
 }

@@ -17,12 +17,12 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet var followButton:UIButton!
     
     var _company:Company!
-    var bindingViewModel:CompaniesListViewModel!
+    var bindingViewModel:ListViewModel!
     
-    func configUI(company: Company, viewModel:CompaniesListViewModel) {
+    func configUI(company: Company, viewModel:ListViewModel) {
         self._company = company
         self.bindingViewModel = viewModel
-        self.companiesIcons.image(urlString: company.logo, withPlaceHolder: UIImage.init(named: ""), doOverwrite: false)
+        self.companiesIcons.image(urlString: company.logo, withPlaceHolder: UIImage.init(named: ASSET_CONSTANTS.PLACEHOLDER_PIC), doOverwrite: false)
         self.companiesIcons.layer.borderWidth = 1
         self.companiesIcons.layer.masksToBounds = false
         self.companiesIcons.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor

@@ -37,7 +37,6 @@ extension MemberListController : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.rowSelected(indexPath.row)
     }
-    
 }
 
 

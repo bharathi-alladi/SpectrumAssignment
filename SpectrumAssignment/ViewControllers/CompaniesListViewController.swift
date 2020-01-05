@@ -13,15 +13,15 @@ class CompaniesListViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var company_tableView : UITableView!
     
-    var viewModel : CompaniesListViewModel!
+    var viewModel : ListViewModel!
     var searchController:UISearchController!
     
-    class func initWithViewModel(_ viewModel: CompaniesListViewModel) -> CompaniesListViewController {
+    class func initWithViewModel(_ viewModel: ListViewModel) -> CompaniesListViewController {
         
         let storyBoard = UIStoryboard.init(name: STRING_CONSTANTS.MAIN, bundle: nil)
         let vcObj = storyBoard.instantiateViewController(withIdentifier: VIEW_CONTROLLER_CONSTANTS.COMPANIES_LIST) as! CompaniesListViewController
         vcObj.viewModel = viewModel
-        vcObj.viewModel.viewController = vcObj
+        vcObj.viewModel.comapaniesViewController = vcObj
         return vcObj
     }
     
@@ -29,12 +29,18 @@ class CompaniesListViewController: UIViewController {
     {
         super.viewDidLoad()
         self.title = STRING_CONSTANTS.COMPANIES
-        self.attachSearchController()
         self.company_tableView.dataSource = self
         self.company_tableView.delegate = self
         
         self.activityIndicator.startAnimating()
         self.viewModel.fetchCompaniesData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.attachSearchController()
+        let rightBarButton = UIBarButtonItem.init(title: STRING_CONSTANTS.SORT, style: .plain, target: self, action: #selector(CompaniesListViewController.sortBtnAction))
+        self.tabBarController!.navigationItem.rightBarButtonItem = rightBarButton
     }
 
     // MARK: - custom functions
@@ -42,9 +48,6 @@ class CompaniesListViewController: UIViewController {
         DispatchQueue.main.async(execute: {() -> Void in
             self.activityIndicator.stopAnimating()
             self.company_tableView.reloadData()
-            
-            let rightBarButton = UIBarButtonItem.init(title: STRING_CONSTANTS.SORT, style: .plain, target: self, action: #selector(CompaniesListViewController.sortBtnAction))
-            self.navigationItem.rightBarButtonItem = rightBarButton
         })
     }
     
@@ -62,7 +65,7 @@ class CompaniesListViewController: UIViewController {
         
         let alertAction1Style:UIAlertAction.Style!
         let alertAction2Style:UIAlertAction.Style!
-        let isAscending = viewModel.isAscending()
+        let isAscending = viewModel.isCompanyAscending()
         if isAscending {
             alertAction1Style = UIAlertAction.Style.destructive
             alertAction2Style = UIAlertAction.Style.default
@@ -72,11 +75,11 @@ class CompaniesListViewController: UIViewController {
         }
         let userActionSheet = UIAlertController.init(title: STRING_CONSTANTS.SORT_NAME, message: STRING_CONSTANTS.BY_NAME, preferredStyle: .actionSheet)
         let alertAction1 = UIAlertAction.init(title: STRING_CONSTANTS.SORT_NAME_ASCENDING, style: alertAction1Style) { (alertAction) in
-            self.viewModel.sortUpdated(true)
+            self.viewModel.sortCompanyUpdated(true)
         }
         userActionSheet.addAction(alertAction1)
         let alertAction2 = UIAlertAction.init(title: STRING_CONSTANTS.SORT_NAME_DESCENDING, style: alertAction2Style) { (alertAction) in
-            self.viewModel.sortUpdated(false)
+            self.viewModel.sortCompanyUpdated(false)
         }
         userActionSheet.addAction(alertAction2)
         self.present(userActionSheet, animated: true, completion: nil)
@@ -87,7 +90,7 @@ class CompaniesListViewController: UIViewController {
 extension CompaniesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel!.getRowCount()
+        return viewModel!.getCompaniesRowCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +107,7 @@ extension CompaniesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.rowSelected(indexPath.row)
+        viewModel.companyRowSelected(indexPath.row)
     }
 }
 
@@ -117,7 +120,7 @@ extension CompaniesListViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
-        navigationItem.searchController = searchController
+        self.tabBarController!.navigationItem.searchController = searchController
         definesPresentationContext = true
     }
 }
@@ -127,14 +130,14 @@ extension CompaniesListViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchString = searchController.searchBar.text ?? ""
-        viewModel.updateResults(with: searchString, isSearchEnabled: true)
+        viewModel.updateCompanyResults(with: searchString, isSearchEnabled: true)
     }
 }
 
 extension CompaniesListViewController: UISearchControllerDelegate {
     
     func didDismissSearchController(_ searchController: UISearchController) {
-        viewModel.updateResults(with: "", isSearchEnabled: false)
+        viewModel.updateCompanyResults(with: "", isSearchEnabled: false)
     }
 }
 

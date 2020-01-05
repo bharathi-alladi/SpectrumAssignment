@@ -16,10 +16,16 @@ class Router {
     
     func appLaunch(_ window: UIWindow) {
         
-        let viewModel = CompaniesListViewModel.init()
-        let intialView = CompaniesListViewController.initWithViewModel(viewModel)
+        let viewModel = ListViewModel.init()
+        let companiesView = CompaniesListViewController.initWithViewModel(viewModel)
+        companiesView.tabBarItem = UITabBarItem.init(title: STRING_CONSTANTS.COMPANIES, image: UIImage.init(named: ASSET_CONSTANTS.COMPANY_ICON), tag: 0)
         
-        rootNavigationController = UINavigationController.init(rootViewController: intialView)
+        let memberView = MembersViewController.initWithViewModel(viewModel)
+        memberView.tabBarItem = UITabBarItem.init(title: STRING_CONSTANTS.COMPANY_MEMBERS, image: UIImage.init(named: ASSET_CONSTANTS.MEMBERS_ICON), tag: 1)
+        
+        let tabBarController = UITabBarController.init()
+        tabBarController.setViewControllers([companiesView, memberView], animated: true)
+        rootNavigationController = UINavigationController.init(rootViewController: tabBarController)
         
         window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()

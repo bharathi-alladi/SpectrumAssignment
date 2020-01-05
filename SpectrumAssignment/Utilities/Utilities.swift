@@ -24,31 +24,39 @@ class Utilities {
         }
     }
     
-    // MARK: - searchAndSort companies
-    func searchAndSortByName(members:[Member], with searchString:String, isAscending:Bool) -> [Member] {
+    // MARK: - searchAndSort members
+    func searchAndSort(members:[Member], with searchString:String, membersSortBy:MembersSortBy) -> [Member] {
         let searchMembers = self._search(members: members, with: searchString)
         
-        var sortedMembers = searchMembers.sorted(by: { $0.fullName() < $1.fullName() })
-        if isAscending {
+        switch membersSortBy {
+        case .nameAscending:
+            let sortedMembers = searchMembers.sorted(by: { $0.fullName() < $1.fullName() })
             return sortedMembers
-        }
-        else {
+            break
+        case .nameDescending:
+            var sortedMembers = searchMembers.sorted(by: { $0.fullName() < $1.fullName() })
             sortedMembers.reverse()
             return sortedMembers
+            break
+        case .ageAscending:
+            let sortedMembers = searchMembers.sorted(by: { $0.age < $1.age })
+            return sortedMembers
+            break
+        default:
+            var sortedMembers = searchMembers.sorted(by: { $0.age < $1.age })
+            sortedMembers.reverse()
+            return sortedMembers
+            break
         }
     }
     
-    func searchAndSortByAge(members:[Member], with searchString:String, isAscending:Bool) -> [Member] {
-        let searchMembers = self._search(members: members, with: searchString)
+    func getAllMemeber(companies:[Company]) -> [Member] {
         
-        var sortedMembers = searchMembers.sorted(by: { $0.age < $1.age })
-        if isAscending {
-            return sortedMembers
+        var allMembers:[Member] = []
+        for company in companies {
+            allMembers.append(contentsOf: company.members)
         }
-        else {
-            sortedMembers.reverse()
-            return sortedMembers
-        }
+        return allMembers
     }
     
     //MARK:- private functions
