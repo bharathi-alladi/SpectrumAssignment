@@ -20,14 +20,15 @@ class MemberDetailsController: UIViewController {
     
     class func initWithViewModel(_ viewModel: MemberDetailViewModel) -> MemberDetailsController {
         
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let vcObj = storyBoard.instantiateViewController(withIdentifier: "MemberDetailsController") as! MemberDetailsController
+        let storyBoard = UIStoryboard.init(name: STRING_CONSTANTS.MAIN, bundle: nil)
+        let vcObj = storyBoard.instantiateViewController(withIdentifier: VIEW_CONTROLLER_CONSTANTS.MEMBER_DETAIL) as! MemberDetailsController
         vcObj.viewModel = viewModel
         vcObj.viewModel.viewController = vcObj
         return vcObj
     }
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.loadUI()
     }
@@ -43,7 +44,4 @@ class MemberDetailsController: UIViewController {
         let fullName = (nameObj?.first ?? "") + " " + (nameObj?.last ?? "")
         memberNameText.text = fullName
     }
-    
-
-
 }

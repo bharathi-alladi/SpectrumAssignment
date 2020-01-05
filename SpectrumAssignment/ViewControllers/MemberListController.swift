@@ -16,8 +16,8 @@ class MemberListController: UIViewController {
     
     class func initWithViewModel(_ viewModel: CompanyDetailViewModel) -> MemberListController {
         
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let vcObj = storyBoard.instantiateViewController(withIdentifier: "MemberListController") as! MemberListController
+        let storyBoard = UIStoryboard.init(name: STRING_CONSTANTS.MAIN, bundle: nil)
+        let vcObj = storyBoard.instantiateViewController(withIdentifier: VIEW_CONTROLLER_CONSTANTS.MEMBER_LIST) as! MemberListController
         vcObj.viewModel = viewModel
         vcObj.viewModel.memberListController = vcObj
         return vcObj
@@ -50,7 +50,7 @@ extension MemberListController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: VIEW_CONSTANTS.MEMBER_CELL)
         cell?.textLabel!.text = viewModel.getMemberTitle(indexPath.row)
         return cell!
     }

@@ -17,4 +17,6 @@ struct Company : Codable {
     var about :String!
     var members : [Member]!
     
+    var isFavourite:Bool?
+    var isFollowing:Bool?
 }

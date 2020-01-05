@@ -21,5 +21,5 @@ struct Member : Codable {
     var name : Name!
     var email : String!
     var phone : String!
-    
+    var isFavourite: Bool?
 }

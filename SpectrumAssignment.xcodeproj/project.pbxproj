@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53957FFB23C10259003BB11B /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFA23C10259003BB11B /* ViewConstants.swift */; };
+		53957FFE23C2162C003BB11B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */; };
+		5395800023C22BA6003BB11B /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFF23C22BA6003BB11B /* AssetConstants.swift */; };
 		53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */; };
 		53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */; };
 		53A60AC423BA425A0020DCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC223BA425A0020DCB4 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53957FFA23C10259003BB11B /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		53957FFF23C22BA6003BB11B /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
 		53A60ABB23BA425A0020DCB4 /* SpectrumAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectrumAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +92,6 @@
 				53A60AD423BA46520020DCB4 /* Constants */,
 				53A60AD323BA464F0020DCB4 /* Models */,
 				53A60AD223BA464A0020DCB4 /* Utilities */,
-				53A60AD123BA46460020DCB4 /* CustomLibraries */,
 				53A60AD023BA46350020DCB4 /* StoryBoards */,
 				53A60AC523BA425D0020DCB4 /* Assets.xcassets */,
 				53A60ACA23BA425D0020DCB4 /* Info.plist */,
@@ -103,17 +108,11 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		53A60AD123BA46460020DCB4 /* CustomLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				53A60AD923BA4A710020DCB4 /* Service Manager  */,
-			);
-			path = CustomLibraries;
-			sourceTree = "<group>";
-		};
 		53A60AD223BA464A0020DCB4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */,
+				53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -131,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				53A60AE023BA4BE30020DCB4 /* NetworkConstants.swift */,
+				53957FFA23C10259003BB11B /* ViewConstants.swift */,
+				53957FFF23C22BA6003BB11B /* AssetConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -162,14 +163,6 @@
 				53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		53A60AD923BA4A710020DCB4 /* Service Manager  */ = {
-			isa = PBXGroup;
-			children = (
-				53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */,
-			);
-			path = "Service Manager ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +236,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53957FFB23C10259003BB11B /* ViewConstants.swift in Sources */,
 				53A60AE123BA4BE30020DCB4 /* NetworkConstants.swift in Sources */,
 				53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */,
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
 				53A60AF623BBAFE00020DCB4 /* MemberDetailViewModel.swift in Sources */,
 				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
 				53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */,
+				5395800023C22BA6003BB11B /* AssetConstants.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
 				53A60AF423BBADD20020DCB4 /* MemberDetailsController.swift in Sources */,
 				53A60ADB23BA4A710020DCB4 /* ServiceManager.swift in Sources */,
@@ -256,6 +251,7 @@
 				53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */,
 				53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */,
 				53A60AE523BA4ED00020DCB4 /* CompaniesListViewModel.swift in Sources */,
+				53957FFE23C2162C003BB11B /* UIImageViewExtension.swift in Sources */,
 				53A60ADF23BA4B520020DCB4 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

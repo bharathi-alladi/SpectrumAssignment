@@ -29,16 +29,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CompaniesImages" translatesAutoresizingMaskIntoConstraints="NO" id="rKJ-dc-kck">
-                                                    <rect key="frame" x="10" y="10" width="29.5" height="29.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_photo" translatesAutoresizingMaskIntoConstraints="NO" id="rKJ-dc-kck">
+                                                    <rect key="frame" x="10" y="9" width="32" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="29.5" id="66U-GL-UKy"/>
+                                                        <constraint firstAttribute="width" constant="32" id="nJC-6G-p6l"/>
+                                                        <constraint firstAttribute="height" constant="32" id="x1q-pE-a6w"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsA-S7-T7a">
-                                                    <rect key="frame" x="49.5" y="21" width="300.5" height="21"/>
+                                                    <rect key="frame" x="52" y="14.5" width="313" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="w7J-8m-djR"/>
+                                                        <constraint firstAttribute="height" constant="21" id="6Ly-Vg-kgx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -46,12 +47,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JsA-S7-T7a" secondAttribute="trailing" constant="10" id="HHM-KD-s6p"/>
-                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="leading" secondItem="rKJ-dc-kck" secondAttribute="trailing" constant="10" id="MWq-iy-6uL"/>
-                                                <constraint firstAttribute="bottom" secondItem="rKJ-dc-kck" secondAttribute="bottom" constant="10" id="Nxq-eE-WBk"/>
-                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="top" secondItem="xDl-h9-l7g" secondAttribute="top" constant="10" id="UhN-hO-weq"/>
-                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="leading" secondItem="xDl-h9-l7g" secondAttribute="leading" constant="10" id="c9R-i5-PKs"/>
-                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="top" secondItem="xDl-h9-l7g" secondAttribute="topMargin" constant="10" id="yNd-rL-NKl"/>
+                                                <constraint firstAttribute="trailing" secondItem="JsA-S7-T7a" secondAttribute="trailing" constant="10" id="7el-xc-gOP"/>
+                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="leading" secondItem="xDl-h9-l7g" secondAttribute="leading" constant="10" id="7q7-5c-a4i"/>
+                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="Bo5-V0-dME"/>
+                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="RTM-ep-d8B"/>
+                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="leading" secondItem="rKJ-dc-kck" secondAttribute="trailing" constant="10" id="S6G-V5-9x6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -255,7 +255,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CompaniesImages" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-cL-KAl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_photo" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-cL-KAl">
                                 <rect key="frame" x="87.5" y="30" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9Vz-ng-U6e"/>
@@ -307,6 +307,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CompaniesImages" width="2015" height="2015"/>
+        <image name="placeholder_photo" width="126" height="126"/>
     </resources>
 </document>

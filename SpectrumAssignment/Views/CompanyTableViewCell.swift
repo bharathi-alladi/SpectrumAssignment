@@ -12,5 +12,4 @@ class CompanyTableViewCell: UITableViewCell {
 
     @IBOutlet var companiesIcons : UIImageView!
     @IBOutlet var companynameLable : UILabel!
-
 }

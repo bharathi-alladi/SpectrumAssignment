@@ -17,8 +17,8 @@ class CompaniesListViewController: UIViewController {
     
     class func initWithViewModel(_ viewModel: CompaniesListViewModel) -> CompaniesListViewController {
         
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let vcObj = storyBoard.instantiateViewController(withIdentifier: "CompaniesListViewController") as! CompaniesListViewController
+        let storyBoard = UIStoryboard.init(name: STRING_CONSTANTS.MAIN, bundle: nil)
+        let vcObj = storyBoard.instantiateViewController(withIdentifier: VIEW_CONTROLLER_CONSTANTS.COMPANIES_LIST) as! CompaniesListViewController
         vcObj.viewModel = viewModel
         vcObj.viewModel.viewController = vcObj
         return vcObj
@@ -27,7 +27,7 @@ class CompaniesListViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.title = "Companies"
+        self.title = STRING_CONSTANTS.COMPANIES
         self.company_tableView.dataSource = self
         self.company_tableView.delegate = self
     }
@@ -50,8 +50,8 @@ class CompaniesListViewController: UIViewController {
     func displayAlert(with error:Error?)  {
         // show an alert here
         DispatchQueue.main.async(execute: {() -> Void in
-            let alertController = UIAlertController.init(title: "Error", message: error?.localizedDescription ?? "Unknown Error", preferredStyle: .alert)
-            let alertAction = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+            let alertController = UIAlertController.init(title: ERROR_CONSTANTS.ERROR, message: error?.localizedDescription ?? ERROR_CONSTANTS.UNKNOWN, preferredStyle: .alert)
+            let alertAction = UIAlertAction.init(title: STRING_CONSTANTS.OK, style: .default, handler: nil)
             alertController.addAction(alertAction)
             self.present(alertController, animated: true, completion: nil)
         })
@@ -66,14 +66,15 @@ extension CompaniesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : CompanyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CompanyTableViewCell") as! CompanyTableViewCell
+        let cell : CompanyTableViewCell = tableView.dequeueReusableCell(withIdentifier: VIEW_CONSTANTS.COMPANY_TABLE_CELL) as! CompanyTableViewCell
         
         let company = self.viewModel.getContact(index: indexPath.row)
         
+        cell.companiesIcons.image(urlString: company.logo, withPlaceHolder: UIImage.init(named: ""), doOverwrite: false)
         cell.companiesIcons.layer.borderWidth = 1
         cell.companiesIcons.layer.masksToBounds = false
-        cell.companiesIcons.layer.borderColor = UIColor.black.cgColor
-        cell.companiesIcons.layer.cornerRadius = cell.frame.height/2
+        cell.companiesIcons.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor
+        cell.companiesIcons.layer.cornerRadius = cell.companiesIcons.frame.height/2
         cell.companiesIcons.clipsToBounds = true
         
         cell.companynameLable.text = company.company

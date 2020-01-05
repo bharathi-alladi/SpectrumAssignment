@@ -19,8 +19,8 @@ class CompanyDetailController: UIViewController {
     
     class func initWithViewModel(_ viewModel: CompanyDetailViewModel) -> CompanyDetailController {
         
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let vcObj = storyBoard.instantiateViewController(withIdentifier: "CompanyDetailController") as! CompanyDetailController
+        let storyBoard = UIStoryboard.init(name: STRING_CONSTANTS.MAIN, bundle: nil)
+        let vcObj = storyBoard.instantiateViewController(withIdentifier: VIEW_CONTROLLER_CONSTANTS.COMPANY_DETAIL) as! CompanyDetailController
         vcObj.viewModel = viewModel
         vcObj.viewModel.companyDetailController = vcObj
         return vcObj
@@ -31,7 +31,7 @@ class CompanyDetailController: UIViewController {
         self.loadUI()
         self.companyimage.layer.borderWidth = 1
         self.companyimage.layer.masksToBounds = false
-        self.companyimage.layer.borderColor = UIColor.black.cgColor
+        self.companyimage.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor
         self.companyimage.layer.cornerRadius = companyimage.frame.height/2
         self.companyimage.clipsToBounds = true
     }

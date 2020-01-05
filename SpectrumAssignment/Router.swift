@@ -23,6 +23,7 @@ class Router {
         
         window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
+        window.tintColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)
     }
     
     func navigateToCompanyDetails (_ company : Company) {
@@ -30,10 +31,10 @@ class Router {
         let viewModel = CompanyDetailViewModel.init(company)
         
         let detailedView = CompanyDetailController.initWithViewModel(viewModel)
-        detailedView.tabBarItem = UITabBarItem.init(title: "Company Details", image: nil, tag: 0)
+        detailedView.tabBarItem = UITabBarItem.init(title: STRING_CONSTANTS.COMPANY_DETAILS, image: UIImage.init(named: ASSET_CONSTANTS.COMPANY_ICON), tag: 0)
         
         let memberListView = MemberListController.initWithViewModel(viewModel)
-        memberListView.tabBarItem = UITabBarItem.init(title: "Company Members", image: nil, tag: 1)
+        memberListView.tabBarItem = UITabBarItem.init(title: STRING_CONSTANTS.COMPANY_MEMBERS, image: UIImage.init(named: ASSET_CONSTANTS.MEMBERS_ICON), tag: 1)
         
         let tabbarViewController = UITabBarController.init()
         tabbarViewController.title = company.company
