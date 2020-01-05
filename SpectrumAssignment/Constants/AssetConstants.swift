@@ -13,4 +13,7 @@ struct ASSET_CONSTANTS {
     static let APP_COLOR = "appColor"
     static let COMPANY_ICON = "companyIconImg"
     static let MEMBERS_ICON = "membersIconImg"
+    
+    static let FAV_BTN = "favourite_button"
+    static let FAV_BTN_SELECTED = "favourite_button_selected"
 }

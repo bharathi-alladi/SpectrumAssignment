@@ -40,8 +40,6 @@ class MemberDetailsController: UIViewController {
         memberEmailText.text = memberObj.email
         memberPhoneText.text = memberObj.phone
         
-        let nameObj = memberObj.name
-        let fullName = (nameObj?.first ?? "") + " " + (nameObj?.last ?? "")
-        memberNameText.text = fullName
+        memberNameText.text = memberObj.fullName()
     }
 }

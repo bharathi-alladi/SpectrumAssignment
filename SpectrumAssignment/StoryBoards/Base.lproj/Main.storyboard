@@ -32,31 +32,59 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_photo" translatesAutoresizingMaskIntoConstraints="NO" id="rKJ-dc-kck">
                                                     <rect key="frame" x="10" y="9" width="32" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="nJC-6G-p6l"/>
-                                                        <constraint firstAttribute="height" constant="32" id="x1q-pE-a6w"/>
+                                                        <constraint firstAttribute="width" constant="32" id="rXX-aD-I9y"/>
+                                                        <constraint firstAttribute="height" constant="32" id="z2V-EG-ayk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsA-S7-T7a">
-                                                    <rect key="frame" x="52" y="14.5" width="313" height="21"/>
+                                                    <rect key="frame" x="52" y="14.5" width="191" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="6Ly-Vg-kgx"/>
+                                                        <constraint firstAttribute="height" constant="21" id="6ER-at-HLR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIz-BJ-3ZW" userLabel="follow">
+                                                    <rect key="frame" x="295" y="10" width="70" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="sYS-HI-KcH"/>
+                                                        <constraint firstAttribute="height" constant="30" id="seh-x5-rWU"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Following"/>
+                                                    <connections>
+                                                        <action selector="followBtnAction" destination="vh6-H2-5XW" eventType="touchUpInside" id="wNz-Ah-Qi3"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV5-96-hpw" userLabel="favourite">
+                                                    <rect key="frame" x="253" y="9" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="NQ4-tr-ZWj"/>
+                                                        <constraint firstAttribute="width" constant="32" id="YM4-hI-1UP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="favourite_button"/>
+                                                    <connections>
+                                                        <action selector="favouriteBtnAction" destination="vh6-H2-5XW" eventType="touchUpInside" id="7nU-S0-umZ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="JsA-S7-T7a" secondAttribute="trailing" constant="10" id="7el-xc-gOP"/>
-                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="leading" secondItem="xDl-h9-l7g" secondAttribute="leading" constant="10" id="7q7-5c-a4i"/>
-                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="Bo5-V0-dME"/>
-                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="RTM-ep-d8B"/>
-                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="leading" secondItem="rKJ-dc-kck" secondAttribute="trailing" constant="10" id="S6G-V5-9x6"/>
+                                                <constraint firstItem="XIz-BJ-3ZW" firstAttribute="leading" secondItem="kV5-96-hpw" secondAttribute="trailing" constant="10" id="0JV-cy-1fs"/>
+                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="leading" secondItem="xDl-h9-l7g" secondAttribute="leading" constant="10" id="4cj-ph-IGD"/>
+                                                <constraint firstAttribute="trailing" secondItem="XIz-BJ-3ZW" secondAttribute="trailing" constant="10" id="5sa-4X-GHf"/>
+                                                <constraint firstItem="XIz-BJ-3ZW" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="Mt2-wV-0pv"/>
+                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="QUW-cK-Jp5"/>
+                                                <constraint firstItem="kV5-96-hpw" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="Rgl-6W-3X4"/>
+                                                <constraint firstItem="rKJ-dc-kck" firstAttribute="centerY" secondItem="xDl-h9-l7g" secondAttribute="centerY" id="dXR-WR-cks"/>
+                                                <constraint firstItem="kV5-96-hpw" firstAttribute="leading" secondItem="JsA-S7-T7a" secondAttribute="trailing" constant="10" id="hHq-eH-gWW"/>
+                                                <constraint firstItem="JsA-S7-T7a" firstAttribute="leading" secondItem="rKJ-dc-kck" secondAttribute="trailing" constant="10" id="qFF-xy-Nbv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="companiesIcons" destination="rKJ-dc-kck" id="DdW-HT-nSG"/>
                                             <outlet property="companynameLable" destination="JsA-S7-T7a" id="l1c-Bu-slc"/>
+                                            <outlet property="favouriteButton" destination="kV5-96-hpw" id="EEp-Vx-TF9"/>
+                                            <outlet property="followButton" destination="XIz-BJ-3ZW" id="Clb-TT-T0E"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="-378"/>
+            <point key="canvasLocation" x="277.60000000000002" y="-378.26086956521743"/>
         </scene>
         <!--Member List Controller-->
         <scene sceneID="11D-Ch-IV6">
@@ -307,6 +335,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favourite_button" width="44" height="44"/>
         <image name="placeholder_photo" width="126" height="126"/>
     </resources>
 </document>

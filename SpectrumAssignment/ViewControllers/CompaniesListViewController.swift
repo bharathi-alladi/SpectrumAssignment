@@ -14,6 +14,7 @@ class CompaniesListViewController: UIViewController {
     @IBOutlet var company_tableView : UITableView!
     
     var viewModel : CompaniesListViewModel!
+    var searchController:UISearchController!
     
     class func initWithViewModel(_ viewModel: CompaniesListViewModel) -> CompaniesListViewController {
         
@@ -28,22 +29,22 @@ class CompaniesListViewController: UIViewController {
     {
         super.viewDidLoad()
         self.title = STRING_CONSTANTS.COMPANIES
+        self.attachSearchController()
         self.company_tableView.dataSource = self
         self.company_tableView.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(animated)
+        
         self.activityIndicator.startAnimating()
         self.viewModel.fetchCompaniesData()
     }
-    
+
     // MARK: - custom functions
     func reloadTableView() {
         DispatchQueue.main.async(execute: {() -> Void in
             self.activityIndicator.stopAnimating()
             self.company_tableView.reloadData()
+            
+            let rightBarButton = UIBarButtonItem.init(title: STRING_CONSTANTS.SORT, style: .plain, target: self, action: #selector(CompaniesListViewController.sortBtnAction))
+            self.navigationItem.rightBarButtonItem = rightBarButton
         })
     }
     
@@ -56,6 +57,30 @@ class CompaniesListViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         })
     }
+    
+    @objc func sortBtnAction() {
+        
+        let alertAction1Style:UIAlertAction.Style!
+        let alertAction2Style:UIAlertAction.Style!
+        let isAscending = viewModel.isAscending()
+        if isAscending {
+            alertAction1Style = UIAlertAction.Style.destructive
+            alertAction2Style = UIAlertAction.Style.default
+        } else {
+            alertAction1Style = UIAlertAction.Style.default
+            alertAction2Style = UIAlertAction.Style.destructive
+        }
+        let userActionSheet = UIAlertController.init(title: STRING_CONSTANTS.SORT_NAME, message: STRING_CONSTANTS.BY_NAME, preferredStyle: .actionSheet)
+        let alertAction1 = UIAlertAction.init(title: STRING_CONSTANTS.SORT_NAME_ASCENDING, style: alertAction1Style) { (alertAction) in
+            self.viewModel.sortUpdated(true)
+        }
+        userActionSheet.addAction(alertAction1)
+        let alertAction2 = UIAlertAction.init(title: STRING_CONSTANTS.SORT_NAME_DESCENDING, style: alertAction2Style) { (alertAction) in
+            self.viewModel.sortUpdated(false)
+        }
+        userActionSheet.addAction(alertAction2)
+        self.present(userActionSheet, animated: true, completion: nil)
+    }
 
 }
 
@@ -66,18 +91,10 @@ extension CompaniesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell : CompanyTableViewCell = tableView.dequeueReusableCell(withIdentifier: VIEW_CONSTANTS.COMPANY_TABLE_CELL) as! CompanyTableViewCell
-        
-        let company = self.viewModel.getContact(index: indexPath.row)
-        
-        cell.companiesIcons.image(urlString: company.logo, withPlaceHolder: UIImage.init(named: ""), doOverwrite: false)
-        cell.companiesIcons.layer.borderWidth = 1
-        cell.companiesIcons.layer.masksToBounds = false
-        cell.companiesIcons.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor
-        cell.companiesIcons.layer.cornerRadius = cell.companiesIcons.frame.height/2
-        cell.companiesIcons.clipsToBounds = true
-        
-        cell.companynameLable.text = company.company
+        let company = self.viewModel.getCompany(index: indexPath.row)
+        cell.configUI(company: company, viewModel: self.viewModel)
         return cell
     }
 }
@@ -89,6 +106,35 @@ extension CompaniesListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         viewModel.rowSelected(indexPath.row)
     }
+}
+
+extension CompaniesListViewController {
     
+    func attachSearchController() {
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.sizeToFit()
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+}
+
+
+extension CompaniesListViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchString = searchController.searchBar.text ?? ""
+        viewModel.updateResults(with: searchString, isSearchEnabled: true)
+    }
+}
+
+extension CompaniesListViewController: UISearchControllerDelegate {
+    
+    func didDismissSearchController(_ searchController: UISearchController) {
+        viewModel.updateResults(with: "", isSearchEnabled: false)
+    }
 }
 

@@ -22,4 +22,8 @@ struct Member : Codable {
     var email : String!
     var phone : String!
     var isFavourite: Bool?
+    
+    func fullName() -> String {
+        return self.name.first + " " + self.name.last
+    }
 }

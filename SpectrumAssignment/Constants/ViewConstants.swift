@@ -27,7 +27,15 @@ struct STRING_CONSTANTS {
     static let MAIN = "Main"
     static let COMPANIES = "Companies"
     static let OK = "OK"
+    static let SORT = "Sort"
+    static let SORT_NAME = "Sort Companies"
+    static let BY_NAME = "By Name"
+    static let SORT_NAME_ASCENDING = "In Ascending order"
+    static let SORT_NAME_DESCENDING = "In Descending order"
     
-    static let COMPANY_DETAILS = "Company Details"
-    static let COMPANY_MEMBERS = "Company Members"
+    static let COMPANY_DETAILS = "Info"
+    static let COMPANY_MEMBERS = "Members"
+    
+    static let FOLLOW = "Follow"
+    static let FOLLOWING = "Following"
 }

@@ -10,6 +10,7 @@
 		53957FFB23C10259003BB11B /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFA23C10259003BB11B /* ViewConstants.swift */; };
 		53957FFE23C2162C003BB11B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */; };
 		5395800023C22BA6003BB11B /* AssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53957FFF23C22BA6003BB11B /* AssetConstants.swift */; };
+		5395800323C23580003BB11B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395800223C23580003BB11B /* Utilities.swift */; };
 		53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */; };
 		53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */; };
 		53A60AC423BA425A0020DCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC223BA425A0020DCB4 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		53957FFA23C10259003BB11B /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		53957FFF23C22BA6003BB11B /* AssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetConstants.swift; sourceTree = "<group>"; };
+		5395800223C23580003BB11B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		53A60ABB23BA425A0020DCB4 /* SpectrumAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectrumAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		53A60AD223BA464A0020DCB4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5395800223C23580003BB11B /* Utilities.swift */,
 				53957FFD23C2162C003BB11B /* UIImageViewExtension.swift */,
 				53A60ADA23BA4A710020DCB4 /* ServiceManager.swift */,
 			);
@@ -242,6 +245,7 @@
 				53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */,
 				53A60AF623BBAFE00020DCB4 /* MemberDetailViewModel.swift in Sources */,
 				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
+				5395800323C23580003BB11B /* Utilities.swift in Sources */,
 				53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */,
 				5395800023C22BA6003BB11B /* AssetConstants.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,

@@ -32,9 +32,7 @@ class CompanyDetailViewModel {
     func getMemberTitle(_ index : Int) -> String {
         
         let member = company.members[index]
-        let name = member.name
-        let fullName = (name?.first ?? "") + " " + (name?.last ?? "")
-        return fullName
+        return member.fullName()
     }
     
     func rowSelected(_ index : Int) {
