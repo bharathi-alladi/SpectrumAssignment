@@ -24,7 +24,7 @@ class CompanyDetailViewModel {
         return company
     }
     
-    func getRowCount() -> Int {
+    func getMembersCount() -> Int {
         
         return company.members.count
     }

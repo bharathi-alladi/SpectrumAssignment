@@ -12,10 +12,7 @@ class CompanyDetailController: UIViewController {
     
     var viewModel : CompanyDetailViewModel!
     
-    @IBOutlet var companyimage : UIImageView!
-    @IBOutlet var aboutLabel : UILabel!
-    @IBOutlet var websiteLabel : UILabel!
-    
+    @IBOutlet var tableView:UITableView!
     
     class func initWithViewModel(_ viewModel: CompanyDetailViewModel) -> CompanyDetailController {
         
@@ -28,22 +25,77 @@ class CompanyDetailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadUI()
-        self.companyimage.layer.borderWidth = 1
-        self.companyimage.layer.masksToBounds = false
-        self.companyimage.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor
-        self.companyimage.layer.cornerRadius = companyimage.frame.height/2
-        self.companyimage.clipsToBounds = true
-    }
-    
-    // load UI
-    func loadUI() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        let details = viewModel.getDetails()
-//        companyimage.image =
-        aboutLabel.text = details.about
-        websiteLabel.text = details.website
-        
+        self.title = viewModel.getDetails().company
     }
 
+
+}
+
+extension CompanyDetailController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.section == 0 {
+            return 220
+        }
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if section == 1 {
+            return STRING_CONSTANTS.MEMBERS
+        }
+        return nil
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return 1
+        }
+        return viewModel!.getMembersCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            let details = viewModel.getDetails()
+            let cell = tableView.dequeueReusableCell(withIdentifier: VIEW_CONSTANTS.COMPANY_DETAIL_CELL) as! CompanyDetailCell
+            
+            cell.companyPic.image(urlString: details.logo, withPlaceHolder: UIImage.init(named: ASSET_CONSTANTS.PLACEHOLDER_PIC), doOverwrite: true)
+            cell.desc.text = details.about
+            cell.website.text = details.website
+            
+            cell.companyPic.layer.borderWidth = 1
+            cell.companyPic.layer.masksToBounds = false
+            cell.companyPic.layer.borderColor = UIColor.init(named: ASSET_CONSTANTS.APP_COLOR)!.cgColor
+            cell.companyPic.layer.cornerRadius = cell.companyPic.frame.height/2
+            cell.companyPic.clipsToBounds = true
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: VIEW_CONSTANTS.COMPANY_MEMBER_CELL)!
+            cell.textLabel!.text = viewModel.getMemberTitle(indexPath.row)
+            return cell
+        }
+    }
+}
+
+extension CompanyDetailController:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 1 {
+            viewModel.rowSelected(indexPath.row)
+        }
+    }
 }

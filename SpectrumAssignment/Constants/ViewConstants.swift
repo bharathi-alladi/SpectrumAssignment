@@ -13,6 +13,8 @@ struct VIEW_CONSTANTS {
     static let COMPANY_TABLE_CELL = "CompanyTableViewCell"
     static let MEMBER_TABLE_CELL = "MembersViewCell"
     static let MEMBER_CELL = "MemberCell"
+    static let COMPANY_DETAIL_CELL = "CompanyDetailCell"
+    static let COMPANY_MEMBER_CELL = "CompanyMemberCell"
 }
 
 struct VIEW_CONTROLLER_CONSTANTS {

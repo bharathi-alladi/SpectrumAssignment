@@ -13,6 +13,7 @@
 		5395800323C23580003BB11B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395800223C23580003BB11B /* Utilities.swift */; };
 		5395800523C26969003BB11B /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395800423C26969003BB11B /* MembersViewController.swift */; };
 		5395800723C26EBB003BB11B /* MembersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395800623C26EBB003BB11B /* MembersViewCell.swift */; };
+		5395800923C37552003BB11B /* CompanyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5395800823C37552003BB11B /* CompanyDetailCell.swift */; };
 		53A60ABF23BA425A0020DCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */; };
 		53A60AC123BA425A0020DCB4 /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */; };
 		53A60AC423BA425A0020DCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A60AC223BA425A0020DCB4 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		53A60AE523BA4ED00020DCB4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE423BA4ED00020DCB4 /* ListViewModel.swift */; };
 		53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */; };
 		53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */; };
-		53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */; };
 		53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */; };
 		53A60AF423BBADD20020DCB4 /* MemberDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */; };
 		53A60AF623BBAFE00020DCB4 /* MemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */; };
@@ -39,6 +39,7 @@
 		5395800223C23580003BB11B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5395800423C26969003BB11B /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		5395800623C26EBB003BB11B /* MembersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewCell.swift; sourceTree = "<group>"; };
+		5395800823C37552003BB11B /* CompanyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailCell.swift; sourceTree = "<group>"; };
 		53A60ABB23BA425A0020DCB4 /* SpectrumAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectrumAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A60ABE23BA425A0020DCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		53A60AE423BA4ED00020DCB4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailController.swift; sourceTree = "<group>"; };
-		53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListController.swift; sourceTree = "<group>"; };
 		53A60AF123BB2CD10020DCB4 /* CompanyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewModel.swift; sourceTree = "<group>"; };
 		53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsController.swift; sourceTree = "<group>"; };
 		53A60AF523BBAFE00020DCB4 /* MemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 			children = (
 				53A60AE823BB13B00020DCB4 /* CompanyTableViewCell.swift */,
 				5395800623C26EBB003BB11B /* MembersViewCell.swift */,
+				5395800823C37552003BB11B /* CompanyDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +159,6 @@
 				53A60AC023BA425A0020DCB4 /* CompaniesListViewController.swift */,
 				5395800423C26969003BB11B /* MembersViewController.swift */,
 				53A60AED23BB2BC20020DCB4 /* CompanyDetailController.swift */,
-				53A60AEF23BB2BD70020DCB4 /* MemberListController.swift */,
 				53A60AF323BBADD20020DCB4 /* MemberDetailsController.swift */,
 			);
 			path = ViewControllers;
@@ -253,7 +253,6 @@
 				53A60AE923BB13B00020DCB4 /* CompanyTableViewCell.swift in Sources */,
 				5395800723C26EBB003BB11B /* MembersViewCell.swift in Sources */,
 				5395800323C23580003BB11B /* Utilities.swift in Sources */,
-				53A60AF023BB2BD70020DCB4 /* MemberListController.swift in Sources */,
 				5395800023C22BA6003BB11B /* AssetConstants.swift in Sources */,
 				53A60AE323BA4DDA0020DCB4 /* Router.swift in Sources */,
 				53A60AF423BBADD20020DCB4 /* MemberDetailsController.swift in Sources */,
@@ -261,6 +260,7 @@
 				53A60ADD23BA4AE10020DCB4 /* Company.swift in Sources */,
 				53A60AEE23BB2BC20020DCB4 /* CompanyDetailController.swift in Sources */,
 				53A60AF223BB2CD10020DCB4 /* CompanyDetailViewModel.swift in Sources */,
+				5395800923C37552003BB11B /* CompanyDetailCell.swift in Sources */,
 				5395800523C26969003BB11B /* MembersViewController.swift in Sources */,
 				53A60AE523BA4ED00020DCB4 /* ListViewModel.swift in Sources */,
 				53957FFE23C2162C003BB11B /* UIImageViewExtension.swift in Sources */,
