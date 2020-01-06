@@ -25,6 +25,7 @@ class Router {
         
         let tabBarController = UITabBarController.init()
         tabBarController.setViewControllers([companiesView, memberView], animated: true)
+        tabBarController.title = STRING_CONSTANTS.SPECTRUM
         rootNavigationController = UINavigationController.init(rootViewController: tabBarController)
         
         window.rootViewController = rootNavigationController

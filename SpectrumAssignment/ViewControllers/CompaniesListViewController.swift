@@ -41,6 +41,13 @@ class CompaniesListViewController: UIViewController {
         self.attachSearchController()
         let rightBarButton = UIBarButtonItem.init(title: STRING_CONSTANTS.SORT, style: .plain, target: self, action: #selector(CompaniesListViewController.sortBtnAction))
         self.tabBarController!.navigationItem.rightBarButtonItem = rightBarButton
+        
+        definesPresentationContext = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        definesPresentationContext = false
     }
 
     // MARK: - custom functions

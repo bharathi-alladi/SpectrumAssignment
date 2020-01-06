@@ -27,7 +27,7 @@ struct VIEW_CONTROLLER_CONSTANTS {
 }
 
 struct STRING_CONSTANTS {
-    
+    static let SPECTRUM = "SPECTRUM"
     static let MAIN = "Main"
     static let COMPANIES = "Companies"
     static let MEMBERS = "Members"
