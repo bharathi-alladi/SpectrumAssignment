@@ -119,7 +119,7 @@ extension CompaniesListViewController {
         searchController.searchBar.sizeToFit()
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = STRING_CONSTANTS.SEARCH
         self.tabBarController!.navigationItem.searchController = searchController
         definesPresentationContext = true
     }

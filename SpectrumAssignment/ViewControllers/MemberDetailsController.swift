@@ -41,5 +41,6 @@ class MemberDetailsController: UIViewController {
         memberPhoneText.text = memberObj.phone
         
         memberNameText.text = memberObj.fullName()
+        self.title = memberObj.name.first
     }
 }

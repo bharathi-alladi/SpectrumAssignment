@@ -31,6 +31,7 @@ struct STRING_CONSTANTS {
     static let MAIN = "Main"
     static let COMPANIES = "Companies"
     static let MEMBERS = "Members"
+    static let SEARCH = "Search"
     static let OK = "OK"
     static let SORT = "Sort"
     static let SORT_NAME = "Sort Companies"

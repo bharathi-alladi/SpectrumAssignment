@@ -32,21 +32,17 @@ class Utilities {
         case .nameAscending:
             let sortedMembers = searchMembers.sorted(by: { $0.fullName() < $1.fullName() })
             return sortedMembers
-            break
         case .nameDescending:
             var sortedMembers = searchMembers.sorted(by: { $0.fullName() < $1.fullName() })
             sortedMembers.reverse()
             return sortedMembers
-            break
         case .ageAscending:
             let sortedMembers = searchMembers.sorted(by: { $0.age < $1.age })
             return sortedMembers
-            break
         default:
             var sortedMembers = searchMembers.sorted(by: { $0.age < $1.age })
             sortedMembers.reverse()
             return sortedMembers
-            break
         }
     }
     

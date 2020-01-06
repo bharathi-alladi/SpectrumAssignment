@@ -13,7 +13,6 @@ class CompanyDetailViewModel {
     var company:Company!
     
     var companyDetailController : CompanyDetailController?
-    var memberListController : MemberListController?
     
     init(_ company:Company) {
         self.company = company
